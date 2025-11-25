@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import os
 
 try:
-    API_KEY = st.secrets["AIzaSyC3hR7rqEoTMJUueSi5cHqbf6WN_wE1OrQ"]
+    API_KEY = st.secrets["GEMINI_API_KEY"]
 except:
     st.error("API Key not found via st.secrets.")
     st.stop()
@@ -91,3 +91,4 @@ if user_question:
             st.write(response.text)
         except Exception as e:
             st.error(f"An error occurred: {e}")
+
